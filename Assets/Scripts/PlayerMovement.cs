@@ -15,15 +15,15 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, speed, 0);
+            transform.position += new Vector3(0, speed * 0.1f, 0);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.position += new Vector3(0, -speed, 0);
+            transform.position += new Vector3(0, -speed * 0.1f, 0);
         }
 
     }
